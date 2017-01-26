@@ -105,6 +105,8 @@ ro.com.google.clientidbase.yt=android-asus
 ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Perf
+ro.core_ctl_min_cpu=0
+ro.core_ctl_max_cpu=4
 ro.vendor.extension_library=libqti-perfd-client.so
 sys.use_fifo_ui=1
 
