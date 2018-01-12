@@ -81,6 +81,17 @@ case "$soc_id" in
         echo "0-3" > /dev/cpuset/top-app/cpus
         echo "0-3" > /dev/cpuset/camera-daemon/cpus
         echo "0-3" > /dev/cpuset/restricted/cpus
+
+        # Disable wakelocks
+        echo 0 > /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_extscan_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_ipa_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_timerfd_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_netlink_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_netmgr_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_pno_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wcnss_filter_lock_ws
     ;;
     "239" | "241" | "263" | "268" | "269" | "270" | "271")
         # Apply MSM8939 specific Sched & Governor settings
@@ -155,6 +166,17 @@ case "$soc_id" in
         echo "0-7" > /dev/cpuset/top-app/cpus
         echo "4-7" > /dev/cpuset/camera-daemon/cpus
         echo "4-7" > /dev/cpuset/restricted/cpus
+
+        # Disable wakelocks
+        echo 0 > /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_extscan_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_ipa_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_timerfd_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_netlink_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_netmgr_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wlan_pno_wl_ws
+        echo 0 > /sys/module/wakeup/parameters/enable_wcnss_filter_lock_ws
 
         # Enable low power modes
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
