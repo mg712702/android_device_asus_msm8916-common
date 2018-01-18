@@ -116,6 +116,9 @@ TARGET_USES_NEW_ION_API :=true
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
+# Exclude serif fonts for saving system.img size.
+EXCLUDE_SERIF_FONTS := true
+
 # FM Radio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
