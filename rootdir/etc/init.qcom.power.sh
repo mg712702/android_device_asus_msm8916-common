@@ -73,6 +73,7 @@ case "$soc_id" in
         echo "0-1" > /dev/cpuset/system-background/cpus
         echo "0-3" > /dev/cpuset/top-app/cpus
         echo "0-3" > /dev/cpuset/camera-daemon/cpus
+        echo "0-3" > /dev/cpuset/restricted/cpus
 
         # Disable wakelocks
         echo 0 > /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws
@@ -150,6 +151,7 @@ case "$soc_id" in
         echo "4-6" > /dev/cpuset/system-background/cpus
         echo "0-7" > /dev/cpuset/top-app/cpus
         echo "4-7" > /dev/cpuset/camera-daemon/cpus
+        echo "4-7" > /dev/cpuset/restricted/cpus
 
         # Disable wakelocks
         echo 0 > /sys/module/wakeup/parameters/enable_qcom_rx_wakelock_ws
