@@ -80,6 +80,7 @@ case "$soc_id" in
         echo "0-1" > /dev/cpuset/system-background/cpus
         echo "0-3" > /dev/cpuset/top-app/cpus
         echo "0-3" > /dev/cpuset/camera-daemon/cpus
+        echo "0-3" > /dev/cpuset/restricted/cpus
     ;;
     "239" | "241" | "263" | "268" | "269" | "270" | "271")
         # Apply MSM8939 specific Sched & Governor settings
@@ -153,6 +154,7 @@ case "$soc_id" in
         echo "4-6" > /dev/cpuset/system-background/cpus
         echo "0-7" > /dev/cpuset/top-app/cpus
         echo "4-7" > /dev/cpuset/camera-daemon/cpus
+        echo "4-7" > /dev/cpuset/restricted/cpus
 
         # Enable low power modes
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
