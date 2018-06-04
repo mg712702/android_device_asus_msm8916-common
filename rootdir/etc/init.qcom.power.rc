@@ -14,7 +14,7 @@ on enable-low-power
     rm /data/system/perfd/default_values
     start perfd
 
-    setprop sys.io.scheduler "bfq"
+    setprop sys.io.scheduler "cfq"
 
 on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
