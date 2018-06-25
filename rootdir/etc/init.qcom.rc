@@ -730,10 +730,16 @@ service vm_bms /vendor/bin/vm_bms
 
 # Start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
-    class late_start
+    class main
     user camera
     group camera system inet input graphics
     writepid /dev/cpuset/camera-daemon/tasks
+
+on property:init.svc.media=restarting
+    restart qcamerasvr
+
+on property:init.svc.servicemanager=restarting
+    restart qcamerasvr
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
