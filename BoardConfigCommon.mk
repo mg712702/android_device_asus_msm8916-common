@@ -98,6 +98,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
       WITH_DEXPREOPT := true
+
       WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
       DONT_DEXPREOPT_PREBUILTS := true
       USE_DEX2OAT_DEBUG := false
@@ -129,6 +130,9 @@ DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
