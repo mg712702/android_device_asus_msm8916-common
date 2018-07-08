@@ -132,6 +132,9 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 # HIDL
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
