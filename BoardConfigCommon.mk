@@ -113,6 +113,9 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
