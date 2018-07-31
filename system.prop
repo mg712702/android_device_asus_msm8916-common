@@ -81,6 +81,9 @@ drm.service.enabled=true
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
+# Healthd
+ro.enable_boot_charger_mode=1
+
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true

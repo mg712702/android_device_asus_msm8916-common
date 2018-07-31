@@ -86,9 +86,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=22 \
 	/system/vendor/bin/mm-qcamera-daemon=22
 
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
@@ -126,6 +123,11 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
+
+# Healthd
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml

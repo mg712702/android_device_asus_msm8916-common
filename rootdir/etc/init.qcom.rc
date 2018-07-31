@@ -668,9 +668,10 @@ service ril-daemon1 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service charger /charger
+service charger /sbin/poweroffcharge
     class charger
-    group log
+    user root
+    group root system graphics
     seclabel u:r:charger:s0
 
 service vm_bms /vendor/bin/vm_bms
