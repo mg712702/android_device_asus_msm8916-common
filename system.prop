@@ -89,6 +89,7 @@ ro.enable_boot_charger_mode=1
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
+vendor.mediacodec.binder.size=6
 
 # Netmgrd
 persist.data.netmgrd.qos.enable=true
