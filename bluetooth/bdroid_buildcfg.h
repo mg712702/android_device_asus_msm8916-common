@@ -26,5 +26,4 @@
 
 #define BTM_DEF_LOCAL_NAME   "Zenfone 2 Laser"
 #define BLUETOOTH_QTI_SW TRUE
-#define BLE_VND_INCLUDED   TRUE
 #endif
