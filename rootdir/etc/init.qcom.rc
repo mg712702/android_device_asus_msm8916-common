@@ -92,6 +92,9 @@ on post-fs
     write /proc/sys/vm/swappiness 35
     write /proc/sys/vm/vfs_cache_pressure 65
 
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
 on post-fs-data
     # Boot time fs tune
     setprop sys.io.scheduler "sioplus"
