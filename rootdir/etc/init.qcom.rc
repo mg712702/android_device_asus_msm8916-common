@@ -171,6 +171,9 @@ on post-fs-data
     rm /data/property/persist.radio.stack_id_0
     rm /data/property/persist.radio.stack_id_1
 
+    # Bluetooth
+    chown bluetooth bluetooth /persist/.bt_nv.bin
+
 on early-boot
     # Set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
