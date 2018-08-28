@@ -18,12 +18,7 @@
 $(call inherit-product, vendor/asus/msm8916-common/msm8916-common-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -323,6 +318,7 @@ PRODUCT_PACKAGES += \
     wificond
 
 PRODUCT_PACKAGES += \
+    libwifi-hal-qcom \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
