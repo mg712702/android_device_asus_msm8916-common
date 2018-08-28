@@ -51,7 +51,14 @@ case "$soc_id" in
         echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
         # Enable thermal core_control now
+        echo "1152000 64 61" > /sys/kernel/msm_thermal/zone0
+	echo "1094400 68 65" > /sys/kernel/msm_thermal/zone1
+        echo "8000000 70 69" > /sys/kernel/msm_thermal/zone2
+	echo "533333 73 71" > /sys/kernel/msm_thermal/zone3
+	echo "400000 77 74" > /sys/kernel/msm_thermal/zone4
         echo 1 > /sys/module/msm_thermal/core_control/enabled
+        echo 1000 > /sys/kernel/msm_thermal/sampling_ms
+        echo 1 > /sys/kernel/msm_thermal/enabled
 
         echo "25000 1094400:50000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
@@ -113,7 +120,14 @@ case "$soc_id" in
         echo 800000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
         # Enable thermal core_control now
+	echo "1152000 64 61" > /sys/kernel/msm_thermal/zone0
+	echo "1094400 68 65" > /sys/kernel/msm_thermal/zone1
+	echo "8000000 70 69" > /sys/kernel/msm_thermal/zone2
+	echo "533333 73 71" > /sys/kernel/msm_thermal/zone3
+	echo "400000 77 74" > /sys/kernel/msm_thermal/zone4
         echo 1 > /sys/module/msm_thermal/core_control/enabled
+        echo 1000 > /sys/kernel/msm_thermal/sampling_ms
+        echo 1 > /sys/kernel/msm_thermal/enabled
 
         # Bring up all cores online
         echo 1 > /sys/devices/system/cpu/cpu1/online
