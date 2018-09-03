@@ -140,8 +140,7 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage hardware
-BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
