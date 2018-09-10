@@ -101,7 +101,6 @@ persist.dbg.vt_avail_ovr=1
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
-persist.media.treble_omx=false
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 vendor.mediacodec.binder.size=6
