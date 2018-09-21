@@ -80,8 +80,6 @@ on late-fs
 
 
 on post-fs
-    symlink /sdcard /storage/sdcard0
-
     start qcom-opengles
 
     # VM tuning
