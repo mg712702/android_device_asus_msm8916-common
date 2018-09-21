@@ -78,8 +78,6 @@ on late-fs
 
 
 on post-fs
-    symlink /sdcard /storage/sdcard0
-
     start qcom-opengles
 
     # Allow writing to the kernel trace log.
