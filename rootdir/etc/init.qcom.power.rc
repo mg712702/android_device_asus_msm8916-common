@@ -1,6 +1,10 @@
 on enable-low-power
     start qcom-power
 
+    # enable CPU input boost
+    write /sys/module/cpu_boost/parameters/boost_ms 40
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1094400
+
     # add a cpuset for the camera daemon
     # we want all the cores for camera
     mkdir /dev/cpuset/camera-daemon
@@ -8,11 +12,17 @@ on enable-low-power
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    # set the TCP congestion control
+    exec - root root system -- sysctl -w net.ipv4.tcp_congestion_control=westwood
+
     rm /data/misc/perfd/default_values
     rm /data/system/perfd/default_values
     start perfd
 
+    # set the I/O scheduler
     setprop sys.io.scheduler "cfq"
+    write /sys/block/mmcblk0/queue/scheduler "cfq"
+    write /sys/block/mmcblk1/queue/scheduler "cfq"
 
 on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
@@ -26,3 +36,4 @@ on property:init.svc.recovery=running
 
     # Set read_ahead value to 2MB
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk1/queue/read_ahead_kb 2048
