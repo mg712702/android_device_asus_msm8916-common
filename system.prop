@@ -11,30 +11,28 @@ sys.use_fifo_ui=1
 
 # Audio
 af.fast_track_multiplier=1
-audio_hal.period_size=192
 audio.deep_buffer.media=true
-persist.audio.fluence.speaker=true
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
 ro.config.vc_call_vol_steps=8
-ro.qc.sdk.audio.fluencetype=fluence
-ro.qc.sdk.audio.ssr=false
-tunnel.audio.encode=false
-use.voice.path.for.pcm.voip=true
+ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.sdk.ssr=false
+vendor.audio.tunnel.encode=false
+vendor.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=true
-voice.voip.conc.disabled=true
+vendor.voice.playback.conc.disabled=true
+vendor.voice.record.conc.disabled=false
+vendor.voice.voip.conc.disabled=true
+vendor.audio_hal.period_size=192
 
 # Audio offload
-audio.offload.buffer.size.kb=64
-audio.offload.gapless.enabled=true
 audio.offload.min.duration.secs=30
-audio.offload.pcm.16bit.enable=true
-audio.offload.pcm.24bit.enable=true
 audio.offload.video=true
 av.offload.enable=true
-av.streaming.offload.enable=false
+vendor.audio.av.streaming.offload.enable=true
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=true
 
 # Bluetooth
 qcom.bluetooth.soc=smd
