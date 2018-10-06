@@ -462,4 +462,8 @@
          or lowmemorykiller.  Directly added to the default value chosen by
          ActivityManager based on screen size. -->
    <integer name="config_extraFreeKbytesAdjust">51200</integer>
+
+    <!-- IP address of the dns server to use if nobody else suggests one -->
+    <string name="config_default_dns_server" translatable="false">1.1.1.1</string>
+
 </resources>
