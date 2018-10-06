@@ -81,14 +81,12 @@ persist.dbg.vt_avail_ovr=1
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
-media.aac_51_output_enabled=true
 persist.media.treble_omx=false
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 
 # Netmgrd
 persist.data.netmgrd.qos.enable=true
-ro.use_data_netmgrd=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -120,5 +118,4 @@ persist.timed.enable=true
 sys.uart.enable=0
 
 # WiFi
-ro.disableWifiApFirmwareReload=true
 wifi.interface=wlan0
