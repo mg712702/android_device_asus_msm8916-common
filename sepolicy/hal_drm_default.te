@@ -1,0 +1,2 @@
+allow hal_drm_default media_data_file:dir { getattr open read search };
+allow hal_drm_default media_data_file:file read;
