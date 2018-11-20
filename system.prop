@@ -79,8 +79,6 @@ ro.max.fling_velocity=20000
 # Media
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 
 # Netmgrd
 persist.data.netmgrd.qos.enable=true
