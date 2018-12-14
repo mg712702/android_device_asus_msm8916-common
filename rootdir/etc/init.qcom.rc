@@ -74,10 +74,16 @@ on post-fs
     write /proc/sys/vm/dirty_expire_centisecs 200
     write /proc/sys/vm/dirty_ratio 40
     write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/vfs_cache_pressure 80
+    write /proc/sys/vm/swappiness 30
+    write /proc/sys/vm/vfs_cache_pressure 65
 
-# msm specific files that need to be created on /data
 on post-fs-data
+    # Tune FS
+    write /sys/block/mmcblk0/queue/add_random 0
+    write /sys/block/mmcblk0/queue/nr_requests 300
+    write /sys/block/mmcblk0/queue/rq_affinity 0
+
+    # Create folder for mm-qcamera-daemon
     mkdir /data/fdAlbum 0770 camera camera
     mkdir /data/misc/camera 0770 camera camera
 
@@ -849,6 +855,8 @@ on property:sys.boot_completed=1
     write /sys/kernel/mm/ksm/pages_to_scan 100
     write /sys/kernel/mm/ksm/sleep_millisecs 500
     write /sys/kernel/mm/ksm/run 1
+    write /proc/sys/vm/min_free_kbytes 2919
+    write /proc/sys/vm/extra_free_kbytes 6075
 
 on property:vold.decrypt=trigger_restart_framework
     stop camera-provider-2-4

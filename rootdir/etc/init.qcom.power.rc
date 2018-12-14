@@ -2,8 +2,9 @@ on enable-low-power
     start qcom-power
 
     # enable CPU input boost
-    write /sys/module/cpu_boost/parameters/boost_ms 40
-    write /sys/module/cpu_boost/parameters/input_boost_freq 1094400
+    write /sys/module/cpu_boost/parameters/boost_ms 70
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
+    write /sys/module/cpu_boost/parameters/input_boost_freq 998400
 
     # add a cpuset for the camera daemon
     # we want all the cores for camera
@@ -11,9 +12,6 @@ on enable-low-power
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
-
-    # set the TCP congestion control
-    exec - root root system -- sysctl -w net.ipv4.tcp_congestion_control=westwood
 
     rm /data/misc/perfd/default_values
     rm /data/system/perfd/default_values
