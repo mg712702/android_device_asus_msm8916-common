@@ -257,16 +257,16 @@ echo $set_almk_ppr_adj > /sys/module/process_reclaim/parameters/min_score_adj
 echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
 echo 70 > /sys/module/process_reclaim/parameters/pressure_max
 echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
 
 if [ $MemTotal -gt 1048576 ]; then
     echo 10 > /sys/module/process_reclaim/parameters/pressure_min
     echo 1024 > /sys/module/process_reclaim/parameters/per_swap_size
-    echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-    echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
+    echo "18432,23040,27648,32256,36864,46080" > /sys/module/lowmemorykiller/parameters/minfree
+    echo 53059 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 elif [ $MemTotal -lt 1048576 ]; then
     echo 50 > /sys/module/process_reclaim/parameters/pressure_min
     echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
-    echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-    echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
+    echo "18432,23040,27648,32256,36864,46080" > /sys/module/lowmemorykiller/parameters/minfree
+    echo 53059 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 fi
