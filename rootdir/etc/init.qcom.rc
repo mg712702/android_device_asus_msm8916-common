@@ -754,6 +754,7 @@ service perfd /vendor/bin/perfd
     group root
     socket perfd seqpacket 0666 root system
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 service thermal-engine /vendor/bin/thermal-engine
     class main
