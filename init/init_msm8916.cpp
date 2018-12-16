@@ -232,7 +232,6 @@ void vendor_load_properties()
     property_set("dalvik.vm.heapmaxfree", "8m");
 
     if (is_target_8916()) {
-        property_set("debug.hwui.use_buffer_age", "false");
         property_set("ro.opengles.version", "196608");
     } else {
         property_set("ro.opengles.version", "196610");
