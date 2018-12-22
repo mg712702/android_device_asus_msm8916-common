@@ -101,6 +101,9 @@ ro.com.google.clientidbase.gmm=android-asus
 ro.com.google.clientidbase.ms=android-asus
 ro.com.google.clientidbase.yt=android-asus
 
+# Memory optimizations
+ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 sys.use_fifo_ui=1
