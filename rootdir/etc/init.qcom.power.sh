@@ -60,6 +60,7 @@ case "$soc_id" in
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
         echo "1 800000:85 998400:90 1094400:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+        echo 0 > /sys/devices/system/cpu/cpufreq/interactive/InStreamFreq
 
         # Bring up all cores online
         echo 1 > /sys/devices/system/cpu/cpu1/online
