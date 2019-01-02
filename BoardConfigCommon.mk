@@ -91,15 +91,16 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
-# Dex
+# Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
-    endif
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+      DONT_DEXPREOPT_PREBUILTS := true
+      USE_DEX2OAT_DEBUG := false
+      WITH_DEXPREOPT_DEBUG_INFO := false
   endif
 endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
