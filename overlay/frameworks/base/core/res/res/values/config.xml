@@ -432,6 +432,9 @@
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
 
+    <!-- Whether to allow process with media UID to access CameraServiceProxy -->
+    <bool name="config_allowMediaUidForCameraServiceProxy">true</bool>
+
     <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
         <item>SUPL_HOST=supl.google.com</item>
