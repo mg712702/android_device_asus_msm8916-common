@@ -436,4 +436,7 @@
          in which case a DUN network will be used if required). -->
     <bool translatable="false" name="config_tether_upstream_automatic">true</bool>
 
+    <!-- Whether device needs to wait for Qualcomm MPCTL service to start
+	 before setting power profiles on boot. -->
+    <bool name="config_waitForMpctlOnBoot">true</bool>
 </resources>
