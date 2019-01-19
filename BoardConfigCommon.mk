@@ -181,7 +181,8 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # SDCLANG
-TARGET_USE_SDCLANG := true
+TARGET_USE_SDCLANG := false
+SDCLANG := false
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
