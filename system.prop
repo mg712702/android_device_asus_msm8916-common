@@ -62,6 +62,7 @@ debug.enable.sglscale=1
 debug.mdpcomp.idletime=600
 debug.mdpcomp.logs=0
 debug.sf.hw=0
+debug.composition.type=c2d
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.sf.disable_backpressure=1
