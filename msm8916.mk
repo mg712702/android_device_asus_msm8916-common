@@ -17,13 +17,6 @@
 # inherit from the proprietary version
 $(call inherit-product, vendor/asus/msm8916-common/msm8916-common-vendor.mk)
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -258,12 +251,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/charger/images/red_8.png:$(TARGET_OUT_DIR)/root/res/images/red_8.png \
     $(LOCAL_PATH)/charger/images/red_9.png:$(TARGET_OUT_DIR)/root/res/images/red_9.png
 
-# Optimize
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
-
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
@@ -317,11 +304,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     sensors.msm8916
-
-# Strip debug
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # Telephony packages
 PRODUCT_PACKAGES += \

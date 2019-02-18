@@ -37,7 +37,6 @@ vendor.audio.offload.buffer.size.kb=64
 vendor.audio.offload.gapless.enabled=true
 
 # Bluetooth
-qcom.bluetooth.soc=smd
 vendor.qcom.bluetooth.soc=pronto
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.7
@@ -52,6 +51,7 @@ ro.qualcomm.bluetooth.pbap=true
 ro.qualcomm.bt.hci_transport=smd
 
 # Boot
+ro.build.shutdown_timeout=0
 sys.vendor.shutdown.waittime=500
 
 # Camera
@@ -118,10 +118,6 @@ rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
 ro.telephony.call_ring.multiple=false
 ro.telephony.default_network=9,9
-
-# Shutdown timeout
-ro.build.shutdown_timeout=0
-persist.vendor.radio.add_power_save=1
 
 # Time
 persist.timed.enable=true
