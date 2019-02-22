@@ -1,6 +1,8 @@
 on enable-low-power
     start qcom-power
 
+    setprop vendor.post_boot.parsed 1
+
     rm /data/misc/perfd/default_values
     rm /data/system/perfd/default_values
     start perfd
