@@ -13,6 +13,8 @@ on enable-low-power
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
+    setprop vendor.post_boot.parsed 1
+
     rm /data/misc/perfd/default_values
     rm /data/system/perfd/default_values
     start perfd
