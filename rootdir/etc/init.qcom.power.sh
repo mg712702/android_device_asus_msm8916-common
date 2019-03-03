@@ -48,7 +48,7 @@ case "$soc_id" in
         # Enable governor
         echo 1 > /sys/devices/system/cpu/cpu0/online
         echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-        echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+        echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
         # Enable thermal core_control now
         echo 1 > /sys/module/msm_thermal/core_control/enabled
@@ -58,9 +58,11 @@ case "$soc_id" in
         echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
         echo 998400 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        echo "1 800000:85 998400:90 1094400:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+        echo "1 200000:45 400000:53 533333:62 800000:70 998400:77 1094400:84 1152000:89 1209600:92" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+	echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/InStreamFreq
+        echo 60000 > /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
 
         # Bring up all cores online
         echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -201,7 +203,10 @@ esac
 
 case $soc_id in
     "206" | "247" | "248" | "249" | "250" | "233" | "240" | "242")
-        setprop ro.min_freq_0 800000
+        setprop ro.min_freq_0 200000
+        setprop ro.min_freq_1 200000
+        setprop ro.min_freq_2 200000
+        setprop ro.min_freq_3 200000
     ;;
     "239" | "241" | "263" | "268" | "269" | "270" | "271")
         setprop ro.min_freq_0 960000
