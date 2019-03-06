@@ -703,7 +703,7 @@ service qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
-   writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/system-background/tasks
 
 service perfd /vendor/bin/perfd
     class late_start
