@@ -1,7 +1,7 @@
 on enable-low-power
     start qcom-power
 
-    # enable CPU input boost
+    # Enable CPU-BOOST
     write /sys/module/cpu_boost/parameters/boost_ms 70
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:800000 1:1094400"

@@ -58,9 +58,9 @@ case "$soc_id" in
         echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
         echo 998400 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-        echo "1 200000:45 400000:53 533333:62 800000:70 998400:77 1094400:84 1152000:89 1209600:92" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+        echo "1 200000:37 400000:48 533333:56 800000:63 998400:69 1094400:77 1152000:83 1209600:90" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
-	echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis
+        echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis
         echo 0 > /sys/devices/system/cpu/cpufreq/interactive/InStreamFreq
         echo 60000 > /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
 
