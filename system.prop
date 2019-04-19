@@ -101,9 +101,6 @@ ro.com.google.clientidbase.gmm=android-asus
 ro.com.google.clientidbase.ms=android-asus
 ro.com.google.clientidbase.yt=android-asus
 
-# Memory optimizations
-ro.vendor.qti.sys.fw.bservice_enable=true
-
 # Perf
 ro.am.reschedule_service=true
 ro.config.max_starting_bg=8
