@@ -75,6 +75,7 @@ on late-fs
     start surfaceflinger
     start bootanim
     start vendor.gralloc-2-0
+    start vendor.devstart_sh
 
     mount_all /vendor/etc/fstab.qcom --late
 
@@ -842,6 +843,13 @@ on property:init.svc.zygote=running
 
 on property:init.svc.zygote=restarting
     stop ppd
+
+service vendor.devstart_sh /system/vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
 
 service wcnss-service /system/vendor/bin/wcnss_service
     class late_start
