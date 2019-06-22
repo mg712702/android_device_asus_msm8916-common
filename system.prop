@@ -33,7 +33,7 @@ vendor.audio.offload.buffer.size.kb=64
 vendor.audio.offload.gapless.enabled=true
 
 # Bluetooth
-qcom.bluetooth.soc=smd
+vendor.bluetooth.soc=pronto
 vendor.qcom.bluetooth.soc=pronto
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.7
