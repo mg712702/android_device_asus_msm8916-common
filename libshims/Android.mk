@@ -59,6 +59,16 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
+LOCAL_SRC_FILES := cne/libshims_cne.cpp
+
+LOCAL_MODULE := libshims_cne
+
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
 LOCAL_SRC_FILES := \
     flp/flp.c
 

@@ -181,6 +181,7 @@ TARGET_USE_SDCLANG := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
+    /system/vendor/lib64/libcneapiclient.so|libshims_cne.so \
     /system/vendor/lib64/libflp.so|libshims_flp.so \
     /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so
 
