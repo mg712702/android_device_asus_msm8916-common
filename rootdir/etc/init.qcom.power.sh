@@ -61,7 +61,6 @@ case "$soc_id" in
         echo "1 200000:37 400000:48 533333:56 800000:63 998400:69 1094400:77 1152000:83 1209600:90" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
         echo 50000 > /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis
-        echo 0 > /sys/devices/system/cpu/cpufreq/interactive/InStreamFreq
         echo 60000 > /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration
 
         # Bring up all cores online
