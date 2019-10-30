@@ -24,12 +24,5 @@ on charger
 on property:sys.boot_completed=1
     trigger enable-low-power
 
-    # set the I/O scheduler
-    setprop sys.io.scheduler "sioplus"
-
-    # Set read_ahead value to 2MB
-    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
-    write /sys/block/mmcblk1/queue/read_ahead_kb 2048
-
 on property:init.svc.recovery=running
     trigger enable-low-power
