@@ -103,8 +103,6 @@ persist.dbg.wfc_avail_ovr=0
 mm.enable.sec.smoothstreaming=true
 mm.enable.smoothstreaming=true
 mmp.enable.3g2=true
-media.stagefright.legacyencoder=true
-media.stagefright.less-secure=true
 vendor.mediacodec.binder.size=6
 
 # Netmgrd
