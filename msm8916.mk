@@ -64,9 +64,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.soundtrigger@2.1-impl \
-    android.hardware.soundtrigger@2.1-service
+    android.hardware.audio.effect@4.0-impl
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -201,7 +199,7 @@ PRODUCT_PACKAGES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
-    android.hardware.light@2.0-service \
+    android.hardware.light@2.0-service
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

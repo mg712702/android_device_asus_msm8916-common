@@ -442,10 +442,6 @@ bin/time_daemon:vendor/bin/time_daemon
 vendor/lib64/libTimeService.so
 vendor/lib/libTimeService.so
 
-# Voice recognition
-vendor/lib/hw/sound_trigger.primary.msm8916.so
-vendor/lib/libsmwrapper.so
-
 # WideVine - from angler
 vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
