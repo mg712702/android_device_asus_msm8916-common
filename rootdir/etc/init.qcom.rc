@@ -785,12 +785,6 @@ service perfd /vendor/bin/perfd
     group root
     disabled
 
-service thermal-engine /vendor/bin/thermal-engine
-    class main
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
-
 service time_daemon /vendor/bin/time_daemon
     class late_start
     user root
