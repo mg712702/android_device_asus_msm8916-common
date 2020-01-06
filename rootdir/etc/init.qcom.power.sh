@@ -52,6 +52,9 @@ case "$soc_id" in
 
         # Enable thermal core_control now
         echo 1 > /sys/module/msm_thermal/core_control/enabled
+        echo 85 > /sys/module/msm_thermal/parameters/core_limit_temp_degC
+        echo 80 > /sys/module/msm_thermal/parameters/limit_temp_degC
+        echo Y > /sys/module/msm_thermal/parameters/enabled
 
         echo "25000 1094400:50000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
@@ -136,6 +139,9 @@ case "$soc_id" in
 
         # Enable thermal core_control now
         echo 1 > /sys/module/msm_thermal/core_control/enabled
+        echo 85 > /sys/module/msm_thermal/parameters/core_limit_temp_degC
+        echo 80 > /sys/module/msm_thermal/parameters/limit_temp_degC
+        echo Y > /sys/module/msm_thermal/parameters/enabled
 
         # Bring up all cores online
         echo 1 > /sys/devices/system/cpu/cpu1/online
