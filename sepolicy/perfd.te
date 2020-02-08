@@ -1,4 +1,7 @@
 allow perfd self:capability fsetid;
 
+allow perfd sysfs_memory:dir search;
+allow perfd sysfs_memory:file { open read write };
+allow perfd proc_kernel_sched:file { open read write };
 allow perfd sysfs_thermal:dir search;
 allow perfd sysfs_thermal:file w_file_perms;

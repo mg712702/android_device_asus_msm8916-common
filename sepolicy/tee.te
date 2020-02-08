@@ -1,0 +1,2 @@
+allow tee exfat:dir search;
+allow tee exfat:file { getattr open read };

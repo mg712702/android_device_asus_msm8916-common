@@ -1,0 +1,6 @@
+allow priv_app device:dir open;
+allow priv_app proc:file { getattr open};
+allow priv_app proc_interrupts:file open;
+allow priv_app sysfs:file  { getattr open read };
+allow priv_app sysfs_android_usb:file open;
+allow priv_app system_app_data_file:dir getattr;

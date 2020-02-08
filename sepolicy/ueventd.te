@@ -1,0 +1,1 @@
+allow ueventd exfat:dir search;

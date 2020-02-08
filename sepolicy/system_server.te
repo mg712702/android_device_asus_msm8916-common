@@ -1,6 +1,11 @@
+allow system_server dalvikcache_data_file:file execute;
+
 allow system_server sensors_device:chr_file rw_file_perms;
 
 allow system_server sysfs_touchscreen:file rw_file_perms;
 
 r_dir_file(system_server, fac_file)
 r_dir_file(system_server, persist_file)
+
+allow system_server default_android_hwservice:hwservice_manager find;
+allow system_server proc:file { getattr open read };

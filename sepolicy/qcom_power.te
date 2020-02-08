@@ -46,3 +46,8 @@ allow qcom_power system_file:file rx_file_perms;
 # Allow running init.qcom.power.sh
 allow qcom_power vendor_shell_exec:file rx_file_perms;
 allow qcom_power vendor_toolbox_exec:file rx_file_perms;
+
+allow qcom_power device:dir { add_name write };
+allow qcom_power device:file { create open write };
+allow qcom_power default_prop:property_service set;
+allow qcom_power proc_kernel_sched:file { open write};

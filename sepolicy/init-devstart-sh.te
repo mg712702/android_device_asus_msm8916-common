@@ -15,3 +15,6 @@ set_prop(init-qcom-devstart-sh, system_prop)
 
 # Allow script to write
 allow init-qcom-devstart-sh sysfs_boot_adsp:file rw_file_perms;
+
+allow init-qcom-devstart-sh firmware_file:dir search;
+allow init-qcom-devstart-sh firmware_file:file { getattr open read };
