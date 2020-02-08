@@ -1,0 +1,24 @@
+allow untrusted_app asdf_data_file:dir getattr;
+allow untrusted_app bootchart_data_file:dir { read search };
+allow untrusted_app configfs:dir read;
+allow untrusted_app debugfs:dir read;
+allow untrusted_app debugfs:file getattr;
+allow untrusted_app debugfs_rpm:file getattr;
+allow untrusted_app debugfs_wakeup_sources:file getattr;;
+allow untrusted_app fac_file:dir getattr;
+allow untrusted_app file_contexts_file:file getattr;
+allow untrusted_app hwservice_contexts_file:file getattr;
+allow untrusted_app init_exec:file getattr;
+allow untrusted_app mtp_device:chr_file getattr;
+allow untrusted_app persist_file:dir getattr;
+allow untrusted_app port_device:chr_file getattr;
+allow untrusted_app qce_device:chr_file getattr;
+allow untrusted_app rootfs:dir read;
+allow untrusted_app rootfs:file getattr;
+allow untrusted_app system_app_data_file:dir getattr;
+allow untrusted_app tombstone_data_file:file getattr;
+allow untrusted_app trace_data_file:dir { getattr write };
+allow untrusted_app thermal_device:chr_file getattr;
+allow untrusted_app vendor_tombstone_data_file:dir getattr;
+allow untrusted_app wifi_vendor_data_file:dir getattr;
+

@@ -1,0 +1,5 @@
+allow toolbox adbtcp_prop:file { getattr open };
+allow toolbox kernel:system syslog_mod;
+allow toolbox proc_kmsg:file { open read };
+allow toolbox self:capability2 syslog;
+allow toolbox system_data_file:file write;
