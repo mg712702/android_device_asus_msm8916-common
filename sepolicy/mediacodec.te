@@ -1,2 +1,3 @@
+allow mediacodec exfat:dir search;
 allow mediacodec exfat:file { read open getattr };
 allow mediacodec vfat:file { read open getattr };

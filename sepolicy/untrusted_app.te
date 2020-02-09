@@ -21,4 +21,3 @@ allow untrusted_app trace_data_file:dir { getattr write };
 allow untrusted_app thermal_device:chr_file getattr;
 allow untrusted_app vendor_tombstone_data_file:dir getattr;
 allow untrusted_app wifi_vendor_data_file:dir getattr;
-
