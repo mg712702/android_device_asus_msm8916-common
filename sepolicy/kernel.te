@@ -3,4 +3,5 @@ allow kernel self:capability { chown dac_override};
 allow kernel asdf_data_file:dir create_dir_perms;
 allow kernel asdf_data_file:file create_file_perms;
 
+allow kernel exfat:dir search;;
 allow kernel vfat:file { getattr open };
